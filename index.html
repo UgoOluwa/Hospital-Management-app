@@ -15,12 +15,12 @@
             <div class="navbar-header page-scroll">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a class="navbar-inverse" href="#page-top">
-                            <img class="img-circle" style ="width: 50px; height:20px;" src="C:/Users/press crew/Desktop/Hospital Management Solution/Images/HosLogo1.png" alt="Hospital" >        
+                        <a>
+                            <img class="img-circle" style ="width: 70px; height:30px;" src="C:/Users/press crew/Desktop/Hospital Management Solution/Images/HosLogo1.png" alt="Hospital" >        
                         </a>
                     </li>
                     <li>
-                        <a class="navbar-brand" href="#page-top" >
+                        <a class="navbar-brand"  >
                             Final Bustop Hospital
                         </a>
                     </li>
@@ -29,31 +29,32 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#"><span class="glyphicon glyphicon-home"></span>Home</a>
-                    </li>
-                    <li>
-                        <a href="#about"><span    
-                            class="glyphicon glyphicon-chevron-right"></span>About our services</a>
+                        <a href="#page-top"><span class="glyphicon glyphicon-home" ></span>Home</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="#new-check-in">
                             <span class="glyphicon glyphicon-user"></span>
-                            New Patient Check-in
+                            Check-in
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <span class="glyphicon glyphicon-log-in"></span>
-                            Check-in
-                        </a>
+                        <button  style="width: 50x; height: 50px;" class="btn btn-primary btn-lg"  >
+                            <a href="C:/Users/press crew/Desktop/Hospital Management Solution/admin.html">
+                            <span class="glyphicon glyphicon-log-in"> Admin</span>
+                            </a>
+                        </button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+
+
+  
+          
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 100%">
             <!-- Indicators -->
@@ -146,7 +147,7 @@
                                 <div class="row control-group">
                                         <div class="form-group col-xs-12 floating-label-form-group controls">
                                             <label for="address">House Address</label>
-                                            <input type="tel" class="form-control" placeholder="Address" id="address" required data-validation-required-message="Please enter your Address.">
+                                            <input type="tel" class="form-control" placeholder="House Address" id="address" required data-validation-required-message="Please enter your Address.">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                 </div>
@@ -170,20 +171,7 @@
                                             <input class="row-control input-lg" type="Date" value="2011-08-19T13:45:00" id="date">
                                         </div>
                                 </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <div class="checkbox">
-                    <label>
-                    <input type="checkbox"> Remember me
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="sr-only" for="inputfile">File input</label>
-            <input type="file" id="inputfile">
-        </div>
-               
+               <br>
         <div id="success"></div>
             <div class="row">
                 <div class="form-group col-xs-12">
@@ -195,6 +183,9 @@
             </div>
         </div>
     </section>
+
+
+    
 
     <footer class="text-center" id="about">
             <div class="footer-above">
@@ -235,5 +226,6 @@
     
     <script src="C:/Users/press crew/Desktop/Hospital Management Solution/scripts/jQuery3.4.1.js"></script>
     <script src="C:/Users/press crew/Desktop/Hospital Management Solution/node_modules/bootstrap\dist/js/bootstrap.min.js"></script>
+    <script src="C:/Users/press crew/Desktop/Hospital Management Solution/scripts/db.js"></script>
 </body>
 </html>
