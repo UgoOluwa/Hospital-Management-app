@@ -56,34 +56,45 @@
                 <div class="text-right">
                     <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#update">Update Patient</a>
                 </div>
+                <br>
+                <div class="text-right">
+                    <a href="" id="refresh" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#">Refresh Log</a>
+                </div>
         </form>
 
 
 
         <table id="patient-info"  style =  "width:100%">
                 <tr>
+                    <th>id</th>
+                    <br>
                     <th>Name</th>
                     <th>Email Address</th>
                     <th>Phone number</th>
                     <th>House Address</th>
                     <th>Gender</th>
+                    <th>Bloodgroup</th>
                     <th>Age</th>
                 </tr>
                 <br>
                 <tr>
+                    <td>1</td>
                     <td>Ugochukwu Odunukwe</td>
                     <td>ugo_oluwa@yahoo.com</td>
                     <td>08183095511</td>
                     <td>13 Eyiowuawi Street</td>
                     <td>Male</td>
+                    <td>O+</td>
                     <td>24</td>
                 </tr>
                 <tr>
+                    <td>2</td>
                     <td>Ekene Odunukwe</td>
                     <td>ekene.odunukwe@yahoo.com</td>
                     <td>08033541334</td>
                     <td>13 Eyiowuawi Street</td>
                     <td>Male</td>
+                    <td>O+</td>
                     <td>23</td>
                 </tr>
             </table>
@@ -104,8 +115,7 @@
               </button>
             </div>
             <div class="modal-body">
-                <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
-              
+                <p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Delete Patient</button>
@@ -133,46 +143,53 @@
           <div class="modal-body mx-3">
             <div class="md-form mb-5">
                 <i class="fas fa-envelope prefix grey-text"></i>
-                <input type="email" id="orangeForm-email" class="form-control validate">
+                <input type="email" id="orangeForm-email" class="form-control validate" required data-validation-required-message="Please enter your Blood Group.">
                 <label data-error="wrong" data-success="right" for="orangeForm-email">Name</label>
+                <p class="help-block text-danger"></p>
             </div>
             <div class="md-form mb-5">
               <i class="fas fa-user prefix grey-text"></i>
-              <input type="text" id="orangeForm-name" class="form-control validate">
+              <input type="text" id="orangeForm-name" class="form-control validate" required data-validation-required-message="Please enter your Blood Group.">
               <label data-error="wrong" data-success="right" for="orangeForm-name">Email</label>
+              <p class="help-block text-danger"></p>
             </div>
             <div class="md-form mb-5">
               <i class="fas fa-envelope prefix grey-text"></i>
-              <input type="email" id="orangeForm-email" class="form-control validate">
+              <input type="email" id="orangeForm-email" class="form-control validate" required data-validation-required-message="Please enter your Blood Group.">
               <label data-error="wrong" data-success="right" for="orangeForm-email">Phone Number</label>
+              <p class="help-block text-danger"></p>
             </div>
     
             <div class="md-form mb-4">
               <i class="fas fa-lock prefix grey-text"></i>
-              <input type="password" id="orangeForm-pass" class="form-control validate">
+              <input type="password" id="orangeForm-pass" class="form-control validate" required data-validation-required-message="Please enter your Blood Group.">
               <label data-error="wrong" data-success="right" for="orangeForm-pass">House Address</label>
+              <p class="help-block text-danger"></p>
             </div>
             <div class="md-form mb-5">
                 <i class="fas fa-envelope prefix grey-text"></i>
-                <input type="email" id="orangeForm-email" class="form-control validate">
+                <input type="email" id="orangeForm-email" class="form-control validate" required data-validation-required-message="Please enter your Blood Group.">
                 <label data-error="wrong" data-success="right" for="orangeForm-email">Gender</label>
+                <p class="help-block text-danger"></p>
             </div>
 
             <div class="md-form mb-5">
                 <i class="fas fa-envelope prefix grey-text"></i>
-                <input type="email" id="orangeForm-email" class="form-control validate">
+                <input type="email" id="orangeForm-email" class="form-control validate" required data-validation-required-message="Please enter your Blood Group.">
                 <label data-error="wrong" data-success="right" for="orangeForm-email">Blood Group</label>
+                <p class="help-block text-danger"></p>
             </div>
 
             <div class="md-form mb-5">
                 <i class="fas fa-envelope prefix grey-text"></i>
-                <input type="email" id="orangeForm-email" class="form-control validate">
+                <input type="email" id="orangeForm-email" class="form-control validate" required data-validation-required-message="Please enter your Blood Group.">
                 <label data-error="wrong" data-success="right" for="orangeForm-email">Age</label>
+                <p class="help-block text-danger"></p>
             </div>
     
           </div>
           <div class="modal-footer d-flex justify-content-center">
-            <button class="btn btn-deep-orange">Update</button>
+            <button id="update-btn" type="submit" class="btn btn-deep-orange">Update</button>
           </div>
         </div>
       </div>
