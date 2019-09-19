@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hospital Management App</title>
+    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body id="page-top">
+    <div id="skipnav"><a href="#maincontent"></a></div>
+    <nav id="mainNav" class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+        <div class="container-fluid">
+            <div class="navbar-header page-scroll">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a>
+                            <img class="img-circle" style ="width: 70px; height:30px;" src="./Images/HosLogo1.png" alt="Hospital" >        
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-brand"  >
+                            Final Bustop Hospital
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#page-top"><span class="glyphicon glyphicon-home" ></span>Home</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#new-check-in">
+                            <span class="glyphicon glyphicon-user"></span>
+                            Check-in
+                        </a>
+                    </li>
+                    <li>
+                        <button  style="width: 50x; height: 50px;" class="btn btn-primary btn-lg"  >
+                            <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#admin">
+                            <span class="glyphicon glyphicon-log-in"> Admin</span>
+                            </a>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="modal fade" id="admin" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h4 class="modal-title w-100 font-weight-bold">Admin Sign In</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body mx-3">
+              <div class="md-form mb-5">
+                  <i class="fas fa-envelope prefix grey-text"></i>
+                  <input type="text" id="admin-name" class="form-control validate" required data-validation-required-message="Please enter your Blood Group.">
+                  <label data-error="wrong" data-success="right" for="orangeForm-email" class="glyphicon glyphicon-user">Name</label>
+                  <p class="help-block text-danger"></p>
+              </div>
+              <div class="md-form mb-5">
+                <i class="fas fa-user prefix grey-text"></i>
+                <input type="password" id="admin-password" class="form-control validate" required data-validation-required-message="Please enter your Blood Group.">
+                <label data-error="wrong" data-success="right" for="orangeForm-name" class="glyphicon glyphicon-chevron-left">Password</label>
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-deep-orange" onclick="hiss()">
+                    Sign In
+                </button>
+              </div>
+            </div>
+        </div>
+    </div>
+    </div>
+              
+  
+          
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 100%">
+            <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+          
+            <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="./Images/Hos2.jpg" alt="Hospital Picture" style="width: 100%">
+                <div class="carousel-caption">
+                    <h3 style="color: rgb(9, 9, 66)">Ward</h3>
+                    <p style="color: rgb(9, 9, 66)">Well furnished wards</p>
+                </div>
+            </div>
+          
+           
+          
+            <div class="item">
+                <img src="./Images/Hos4.jpg" alt="Hospital Picture" style="width: 100%">
+                <div class="carousel-caption">
+                    <h3 style="color: rgb(9, 9, 66)">Emergency</h3>
+                    <p style="color: rgb(9, 9, 66)">Well equiped surgery equipment</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./Images/Hos3.jpg" alt="Hospital Picture"style="width: 100%">
+                <div class="carousel-caption">
+                    <h3 style="color: rgb(9, 9, 66)">Personell</h3>
+                    <p style="color: rgb(9, 9, 66)">Standby personell to attend speadily</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./Images/Hos5.jpg" alt="Hospital Picture" style="width: 100%">
+                <div class="carousel-caption">
+                    <h3 style="color: rgb(9, 9, 66)">Medical Ethics</h3>
+                    <p style="color: rgb(9, 9, 66)">Based on world standard</p>
+                </div>
+            </div>
+            </div>
+          
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+    </div>
+         
+
+    <section id="new-check-in">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>New Patient Check-In</h2>
+                        <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <form class="form-horizontal" id="information" role="form">
+                            <div class="row control-group">
+                                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                                        <label for="name">Name</label>
+                                        <input type="text" name="name" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="row control-group">
+                                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" name="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="row control-group">
+                                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel"  name="phone" class="form-control" placeholder="Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="row control-group">
+                                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                                            <label for="address">House Address</label>
+                                            <input type="text" name="address" class="form-control" placeholder="House Address" id="address" required data-validation-required-message="Please enter your Address.">
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                </div>
+                                <div class="row control-group">
+                                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                                            <label for="gender">Gender</label>
+                                            <input type="text" name="gender" class="form-control" placeholder="Gender" id="gender" required data-validation-required-message="Please enter your Gender.">
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                </div>
+                                <div class="row control-group">
+                                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                                            <label for="blood">Blood Group</label>
+                                            <input type="text" name="bloodgroup" class="form-control" placeholder="Bloodgroup" id="bloodgroup" required data-validation-required-message="Please enter your Blood Group.">
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                </div>
+                                <div class="row control-group">
+                                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                                            <label for="blood">Age</label>
+                                            <input type="text" name="age" class="form-control" placeholder="Age" id="age" required data-validation-required-message="Please enter your Age.">
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                </div>
+                                
+               <br>
+        <div id="success"></div>
+            <div class="row">
+                <div class="form-group col-xs-12">
+                    <button id="check-in" type="submit" class="btn btn-success btn-lg">Check-in</button>
+                </div>
+            </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <footer class="text-center" id="about">
+            <div class="footer-above">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="footer-col col-md-4">
+                            <h3>Location</h3>
+                            <p>13 Eyiowuawi Street Ijesha 
+                                <br>Surulere, Lagos, Nigeria </p>
+                        </div>
+                        
+                        <div class="footer-col col-md-4">
+                            <h3>About our services</h3>
+                            <p>We are the Final Bustop Hospital, a medical outfit that is founded on pure ethics of medicine and culture.<a href="#page-top">Final Bustop Hospital</a>.</p>
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3>Contact Us</h3>
+                            <p>08183095511, 08033541334 <br><a href="#">finalbustop@gmail.com</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-below">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            Copyright &copy; Ugochukwu Odunukwe
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+    
+    <script src="./scripts/jQuery3.4.1.js"></script>
+    <script src="./scripts/db.js"></script>
+    <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "name": "Ugochukwu Odunukwe",
+      "email": "ugo_oluwa@yahoo.com",
+      "phone": "08183095511",
+      "address": "13 Eyiowuawi Street Ijesha",
+      "gender": "Male",
+      "bloodgroup": "O+",
+      "age": "24"
+    },
+    {
+      "id": 2,
+      "name": "Ekene Odunukwe",
+      "email": "ekene.odunukwe@yahoo.com",
+      "phone": "08033541334",
+      "address": "13 Eyiowuawi Street Ijesha",
+      "gender": "Male",
+      "bloodgroup": "O+",
+      "age": "23"
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "password": "finalbustop9876"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

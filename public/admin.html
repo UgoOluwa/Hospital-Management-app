@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hospital Management App</title>
+    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body id="page-admin">
+    <div id="skipnav"><a href="#maincontent"></a></div>
+    <nav id="mainNav" class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+        <div class="container-fluid">
+            <div class="navbar-header page-scroll">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a>
+                            <img class="img-circle" style ="width: 70px; height:30px;" src="./Images/HosLogo1.png" alt="Hospital" >        
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-brand"  >
+                            Final Bustop Hospital
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <button  style="width: 50x; height: 50px;" class="btn btn-primary btn-lg"  >
+                            <a href="./index.html">
+                            <span class="glyphicon glyphicon-home"></span>
+                            Home
+                            </a>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section>
+        <div>
+            <p>
+                <h1 class="text-center">Log of Patient Information</span></h1>
+            </p>
+        </div>
+        <br>
+        <form id="refresh-log"   class="form-inline">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <input id="search" name="search" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search Patient Information">
+                <button type="submit" class="btn btn-info btn-lg" data-toggle="modal"  data-target="#myModal">Search</button>
+        </form>
+        <br>
+        <form id="update-patient"   class="form-inline">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <input id="patient-input-form" name="get" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search Patient Information">
+            <button type="submit" class="btn btn-info btn-lg" data-toggle="modal"  data-target="#update">Update Patient Information</button>
+        </form>
+                
+        
+
+
+
+        <table class="table table-bordered table-striped" id="patient-info"  style =  "width:100%">
+                <tr>
+                    <th>id</th>
+                    <br>
+                    <th>Name</th>
+                    <th>Email Address</th>
+                    <th>Phone number</th>
+                    <th>House Address</th>
+                    <th>Gender</th>
+                    <th>Bloodgroup</th>
+                    <th>Age</th>
+                </tr>
+                <br>
+                
+            </table>
+    </section>
+    
+
+  
+    
+
+   <!-- Modal -->
+<div style="width: 100%" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Patient Information</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="info-text" class="modal-body">
+                <table class="table table-bordered table-striped" id="info-table"  style =  "width:100%">
+                    <tr>
+                        <th>id</th>
+                        <br>
+                        <th>Name</th>
+                        <th>Email Address</th>
+                        <th>Phone number</th>
+                        <th>House Address</th>
+                        <th>Gender</th>
+                        <th>Bloodgroup</th>
+                        <th>Age</th>
+                    </tr>
+                    <br>
+                    
+                </table>
+            </div>
+            <div class="modal-footer">
+                    <form id="delete-form"   class="form-inline">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                            <input id="id-delete" name="id-search" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="input patient id">
+                            <button type="submit" class="btn btn-secondary" id="delete-btn">Delete Patient</button>
+                    </form>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+
+      
+      
+      
+      <!-- Modal -->
+
+
+      <div class="modal fade" id="update" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Update Patient Information</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3">
+            <form class="form-horizontal" id="information" role="form">
+                <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="name">Name</label>
+                            <input type="text"  name="name" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel"  name="phone" class="form-control" placeholder="Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label for="address">House Address</label>
+                                <input id="update-add-info" type="text" name="address" class="form-control" placeholder="House Address" id="address" required data-validation-required-message="Please enter your Address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                    </div>
+                    <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label for="gender">Gender</label>
+                                <input id="update-gender-info" type="text" name="gender" class="form-control" placeholder="Gender"  required data-validation-required-message="Please enter your Gender.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                    </div>
+                    <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label for="blood">Blood Group</label>
+                                <input id="update-bloodgroup-info" type="text" name="bloodgroup" class="form-control" placeholder="Bloodgroup"  required data-validation-required-message="Please enter your Blood Group.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                    </div>
+                    <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label for="blood">Age</label>
+                                <input id="update-age-info" type="text" name="age" class="form-control" placeholder="Age"  required data-validation-required-message="Please enter your Age.">
+                                <p class="help-block retext-danger"></p>
+                            </div>
+                    </div>
+                </form>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button id="update-btn" type="submit" class="btn btn-deep-orange">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+   
+
+
+    
+    <br>
+    <footer class="text-center" id="about">
+            <div class="footer-above">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="footer-col col-md-4">
+                            <h3>Location</h3>
+                            <p>13 Eyiowuawi Street Ijesha 
+                                <br>Surulere, Lagos, Nigeria </p>
+                        </div>
+                        
+                        <div class="footer-col col-md-4">
+                            <h3>About our services</h3>
+                            <p>We are the Final Bustop Hospital, a medical outfit that is founded on pure ethics of medicine and culture.<a href="#page-top">Final Bustop Hospital</a>.</p>
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3>Contact Us</h3>
+                            <p>08183095511, 08033541334 <br><a href="#">finalbustop@gmail.com</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-below">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            Copyright &copy; Ugochukwu Odunukwe
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+    
+    <script src="./scripts/jQuery3.4.1.js"></script>
+    <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./scripts/db.js"></script>
+</body>
+</html>
