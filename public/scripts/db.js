@@ -65,15 +65,16 @@ $(document).on('submit', '#update-patient', function(){
     event.preventDefault();
     var updateInfo = $('input[name=get]').val();
     console.log(updateInfo);
-    $.getJSON("http://localhost:3000/patients?name="+updateInfo, function(value){
-        console.log(value[0].name);
-        $('#update-name-info').value  = value[0].name;
-        $('#update-email-info').value  = value[0].email;
-        $('#update-phone-info').value  = value[0].phone;
-        $('#update-address-info').value  = value[0].address;
-        $('#update-gender-info').value  = value[0].gender;
-        $('#update-bloodgroup-info').value = value[0].bloodgroup;
-        $('#update-age-info').value  = value[0].age;
+    $.getJSON("http://localhost:3000/patients?name="+updateInfo, function(data){
+        console.log(data[0].name);
+        $('#update-id-info').val(data[0].id);
+        $('#update-name-info').val(data[0].name);
+        $('#update-email-info').val(data[0].email);
+        $('#update-phone-info').val(data[0].phone);
+        $('#update-address-info').val(data[0].address);
+        $('#update-gender-info').val(data[0].gender);
+        $('#update-bloodgroup-info').val(data[0].bloodgroup);
+        $('#update-age-info').val(data[0].age);
     })
 
 })
@@ -128,7 +129,7 @@ $(document).on('submit', '#refresh-log', function(event){
             console.log(info);
         })
         error: (function(){
-            alert("Pa---tient is not checked in")
+            alert("Patient is not checked in")
         })
 
     })
@@ -136,12 +137,15 @@ $(document).on('submit', '#refresh-log', function(event){
 
 
 
-//delete Patien-
+
+
+
+    //delete Patien-
 
 $(document).on('submit', '#delete-form', function(event){
     event.preventDefault();
     var patientId = $('input[name=id-search]').val();
-    let deleteJob = confirm("Are you sure you want to delete this job.");
+    let deleteJob = confirm("Are you sure you want to check out this patient");
     if (deleteJob == true){
         $.ajax({
             type        : 'DELETE', // define the type of HTTP verb we want to use (POST for our form)
@@ -152,7 +156,45 @@ $(document).on('submit', '#delete-form', function(event){
         // using the done promise callback
         .done(function(data) {
             alert("Patient checked out successfully")
-            window.location = "C:/Users/press crew/Desktop/Hospital Management Solution/admin.html"
+            window.location = "./admin.html"
         });
-    }
+        // stop the form from submitting the normal way and refreshing the page
+        event.preventDefault();
+    };
+
 })
+
+
+
+$(document).on('submit', '#update-form', function(event){
+    // get the form data
+    let formData = {
+        'name' : $('input[name=name]').val(),
+        'email': $('input[name=email]').val(),
+        'phone': $('input[name=phone]').val(),
+        'address': $('input[name=address]').val(),
+        'gender': $('input[name=gender]').val(),
+        'bloodgroup': $('input[name=bloodgroup]').val(),
+        'age': $('input[name=age]').val(),
+        'id': $('input[name=id]').val(),
+    }
+    let int = $('input[name=id]').val();
+    // process the form
+    $.ajax({
+        type        : 'PATCH', // define the type of HTTP verb we want to use (POST for our form)
+        url         : 'http://localhost:3000/patients/'+ $('input[name=id]').val(), // the url where we want to POST
+        data        : formData, // our data object
+        dataType    : 'json', // what type of data do we expect back from the server
+        encode      : true
+    })
+    // using the done promise callback
+    .done(function(data) {
+        alert("updated successfully")
+        window.location = "./admin.html" 
+        $('#update-form').each(function(){
+            this.reset();
+        });
+    });
+    // stop the form from submitting the normal way and refreshing the page
+    event.preventDefault();
+});

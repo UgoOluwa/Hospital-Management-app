@@ -141,32 +141,32 @@
             </button>
           </div>
           <div class="modal-body mx-3">
-            <form class="form-horizontal" id="information" role="form">
+            <form class="form-horizontal" id="update-form" role="form">
                 <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label for="name">Name</label>
-                            <input type="text"  name="name" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                            <input  id="update-name-info" type="text"  name="name" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label for="email">Email Address</label>
-                            <input type="email" name="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                            <input id="update-email-info" type="email" name="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label for="phone">Phone Number</label>
-                            <input type="tel"  name="phone" class="form-control" placeholder="Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+                            <input id="update-phone-info" type="tel"  name="phone" class="form-control" placeholder="Number" id="phone" required data-validation-required-message="Please enter your phone number.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label for="address">House Address</label>
-                                <input id="update-add-info" type="text" name="address" class="form-control" placeholder="House Address" id="address" required data-validation-required-message="Please enter your Address.">
+                                <input id="update-address-info" type="text" name="address" class="form-control" placeholder="House Address" id="address" required data-validation-required-message="Please enter your Address.">
                                 <p class="help-block text-danger"></p>
                             </div>
                     </div>
@@ -181,7 +181,7 @@
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label for="blood">Blood Group</label>
                                 <input id="update-bloodgroup-info" type="text" name="bloodgroup" class="form-control" placeholder="Bloodgroup"  required data-validation-required-message="Please enter your Blood Group.">
-                                <p class="help-block text-danger"></p>
+                                <p  class="help-block text-danger"></p>
                             </div>
                     </div>
                     <div class="row control-group">
@@ -191,11 +191,20 @@
                                 <p class="help-block retext-danger"></p>
                             </div>
                     </div>
-                </form>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="blood">id</label>
+                            <input id="update-id-info" type="text" name="id" class="form-control" placeholder="id"  required data-validation-required-message="Please enter your id.">
+                            <p class="help-block retext-danger"></p>
+                        </div>
+                </div>
+
+                
           </div>
           <div class="modal-footer d-flex justify-content-center">
             <button id="update-btn" type="submit" class="btn btn-deep-orange">Update</button>
           </div>
+          </form>
         </div>
       </div>
     </div>
